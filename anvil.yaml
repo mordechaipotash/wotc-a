@@ -1,15 +1,32 @@
 allow_embedding: false
 db_schema: {}
-name: Classic 1
-package_name: Classic_1
+name: wotc_a
+package_name: wotc_a
 renamed: true
 runtime_options:
   client_version: '3'
   server_spec: {base: python310-minimal}
   server_version: python3-sandbox
   version: 2
+secrets:
+  DB_URL:
+    type: secret
+    value: {YN5KMVDS2M4PV2HU: 1aCDfmqEeZzhRyEXbAlKKDKDWNUkgTALCeYPMYa1lne9BJI3jZi9TajPRykJ+6mu7p4pXd0q+814kozaTnPPcGwCyvzE6Y0aWgztNhv+Mo48UMWAOi6K2a32NVslYdcGsujYyMtCIjbRf2jNigl9LhPocOpkY/jzaSQk/3rrusoC7kkp8WnvJSuA4ZBX31LOJQBNXuK27lybslq4btMQrGDNbTdNjBIIwNvB8wcjQchyybeLK2qIsRXhWv81qhzy9liv+X2kFHhVazE69ak=}
+  OPENROUTER_API_KEY:
+    type: secret
+    value: {YN5KMVDS2M4PV2HU: yWEvqn97v1bBZs071rwqarfGYy6F98pvWwm9cjw7y0mx0fHonnk70iPku34+14vRwuOYBFldSzCP8gDg38P4J4yOOibX71rG84FOE7B+okfbgmHyBFjnzQxZgmP4o6lOBkXSnLvdU5oN6UYvJQBFrVzfGCv4EAMRNlf94PlRLWM7cS0dFetgM0XEjZzg4peZKPpNcj0bualKF8ynZr4fZ7WsGAX9oPD0}
+  SUPABASE_SERVICE_KEY:
+    type: secret
+    value: {YN5KMVDS2M4PV2HU: ''}
+  SUPABASE_URL:
+    type: secret
+    value: {YN5KMVDS2M4PV2HU: 58ptnOU7Kv4gsHCgT0Y2ZWO2NBFrn4gyBASA5KPlceCzqeZsKUf2PFncxGL64+xjxjVNa8n3gNqhuQD0XUSUJ74P7folZtQiYDuPGEEPsQsqVBvc8GIUvN0nkqwrztbRKJ43WbeRfcxIrik1OKxUu6n8OZJ3ELwbqpGQeMxB7lRW3QBo55y0FBw=}
 services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/tables.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/secrets.yml
 startup_form: Form1
+uplink_visible: true
