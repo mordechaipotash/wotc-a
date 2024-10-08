@@ -1,0 +1,23 @@
+components:
+- components:
+  - event_bindings: {click: button_1_click}
+    layout_properties: {grid_position: 'ZYSFNK,GBEDFQ'}
+    name: button_get_structure
+    properties: {text: Get Database Structure}
+    type: Button
+  - layout_properties: {grid_position: 'QQIDGU,GEQJBV'}
+    name: button_process_email
+    properties: {text: Process Email}
+    type: Button
+  - layout_properties: {grid_position: 'VWJOQO,ULLLIO'}
+    name: text_area_results
+    properties: {}
+    type: TextArea
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:dashboard.html'}
+  type: HtmlTemplate
+is_package: true

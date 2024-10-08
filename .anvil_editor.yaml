@@ -4,7 +4,7 @@ unique_ids:
     single-column.html: ORPXD5ZAKN26FFCCIIGIKIMHAU533TAN
     theme.css: 4EZHGFPYFAUQ4UQOXG4PZMDWK3BBYNTD
   forms:
-    Form1: '1728385523068375199451073.4682'
+    TestForm: '1728385523068375199451073.4682'
   modules: {}
   scripts: {}
   server_modules:
