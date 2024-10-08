@@ -6,7 +6,7 @@ class TestForm(TestFormTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
 
-  def button_get_structure_click(self, **event_args):
+  def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     print("Get Database Structure button clicked")
     try:
@@ -26,13 +26,16 @@ class TestForm(TestFormTemplate):
     """This method is called when the button is clicked"""
     print("Process Email button clicked")
     try:
-      # For testing, we'll use a dummy email_id
-      email_id = 'dummy_email_id'
+      # Replace 'dummy_email_id' with a text input for the email ID
+      email_id = self.text_box_email_id.text
       result = anvil.server.call('process_email', email_id)
       print(f"Received result: {result}")
-      self.text_area_results.text = f"Email Processing Result:\n\n"
-      self.text_area_results.text += f"Names: {result['names']}\n"
-      self.text_area_results.text += f"SSN: {result['ssn']}\n"
+      if result['status'] == 'success':
+        self.text_area_results.text = f"Email Processing Result:\n\n"
+        self.text_area_results.text += f"Names: {result['names']}\n"
+        self.text_area_results.text += f"SSN: {result['ssn']}\n"
+      else:
+        self.text_area_results.text = f"Error: {result['message']}"
     except Exception as e:
       print(f"Error in button_process_email_click: {str(e)}")
       self.text_area_results.text = f"Error processing email: {str(e)}"

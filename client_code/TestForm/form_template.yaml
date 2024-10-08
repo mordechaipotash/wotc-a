@@ -5,7 +5,8 @@ components:
     name: button_get_structure
     properties: {text: Get Database Structure}
     type: Button
-  - layout_properties: {grid_position: 'QQIDGU,GEQJBV'}
+  - event_bindings: {click: button_process_email_click}
+    layout_properties: {grid_position: 'QQIDGU,GEQJBV'}
     name: button_process_email
     properties: {text: Process Email}
     type: Button
