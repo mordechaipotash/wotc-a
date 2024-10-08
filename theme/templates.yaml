@@ -1,0 +1,40 @@
+- description: A page with a card-based layout, and a sidebar menu for links
+  form:
+    class_name: Form
+    code: "from ._anvil_designer import $NAME$Template\nfrom anvil import *\n\nclass $NAME$($NAME$Template):\n\n  def __init__(self, **properties):\n    # Set Form properties and Data Bindings.\n    self.init_components(**properties)\n\n    # Any code you write here will run before the form opens.\n    \n"
+    components:
+    - layout_properties: {slot: default}
+      name: content_panel
+      properties: {}
+      type: ColumnPanel
+    container:
+      properties: {html: '@theme:dashboard.html'}
+      type: HtmlTemplate
+    is_package: true
+  img: img/form-templates/dashboard.png
+  name: Card-based layout with sidebar
+- description: A page with a single-column layout and a large header
+  form:
+    class_name: Form
+    code: |
+      from ._anvil_designer import $NAME$Template
+      from anvil import *
+
+      class $NAME$($NAME$Template):
+
+        def __init__(self, **properties):
+          # Set Form properties and Data Bindings.
+          self.init_components(**properties)
+
+          # Any code you write here will run before the form opens.
+    components:
+    - layout_properties: {slot: default}
+      name: content_panel
+      properties: {}
+      type: ColumnPanel
+    container:
+      properties: {html: '@theme:single-column.html'}
+      type: HtmlTemplate
+    is_package: true
+  img: img/form-templates/material-single-column.png
+  name: Single-column layout
